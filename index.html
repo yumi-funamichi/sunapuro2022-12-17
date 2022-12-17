@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link要素にメディアクエリを書く -->
+    <link rel="stylesheet" href="./css/style.css" media="screen and (min-width: 769px)">
+    <link rel="stylesheet" href="./css/style_sp.css" media="screen and (max-width: 768px)">
+
+    <title>FunaCoffee</title>
+</head>
+<body>
+    <header>
+       <!-- a+nav>ul>(li>a)*3 -->
+      <a href="#!">LOGO</a>
+      <nav>
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+        <section id="main-visual">
+            <!-- .box>h1r+p -->
+            <div class="box">
+                <h1>FunaCoffee</h1>
+                <p>うぇーーーーーーーーーい</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>ABOUT</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis earum mollitia quasi reiciendis autem, pariatur illum nisi commodi! Quae alias hic veniam nostrum vitae eligendi maiores distinctio veritatis fugiat debitis?</p>          
+        </section>
+
+        <section id="gallery">
+            <h2>GALLERY</h2>
+            <div class="inline-container">
+                <img src="./img/jessica-lewis-Am2kjOEKADs-unsplash.jpg" alt="">
+                <img src="./img/pawel-czerwinski-_NPyWow9CZk-unsplash.jpg" alt="">
+                <img src="./img/sebastian-schuppik-H7xTpvBjJS4-unsplash.jpg" alt="">
+            </div>
+            <div class="block-container">
+                <p>あああああ</p>
+                <p>いいいいい</p>
+                <p>ううううう</p>
+            </div>
+        </section>
+    </main>
+    <footer>Copyright &copy; ふな 2022</footer>
+</body>
+</html>

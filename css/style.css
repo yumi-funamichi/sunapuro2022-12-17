@@ -1,0 +1,178 @@
+@charset "UTF-8";
+html {
+    scroll-behavior: smooth;
+	overflow-y: scroll; /* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+    /* scroll-behavior: smooth; */
+}
+
+/* リセットおまじない--------------------------------- */
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+li {
+	list-style: none;
+}
+a {
+	outline: none;
+	color: inherit;
+    text-decoration: none;
+}
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+/* --------------------------------------------------- */
+body {
+	font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+    color:#3b4043;
+    
+}
+h1{
+    font-size: 28px;
+    margin: 40px;
+}
+h2{
+    font-size: 20px;
+    margin: 10px 0;
+}
+p{
+    text-align: left;
+}
+a{
+    display:block;
+}
+section{
+    margin-top: 55px;
+}
+/* ーーーーーーーーーーーーーーーーー */
+
+header {
+    background-color: #000;  /*bgc*/
+    width: 100%;  /*w100p*/
+    height: 60px; /*h60*/
+    color: #fff; 
+    font-weight: 700; /*fw700*/
+
+    /*子要素を横並びにする*/
+    display: flex; /*df*/
+    justify-content: space-around;/*jcsd*/
+    align-items: center; /*aic*/
+
+}
+
+header nav {
+    width: 40%;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main-visual {
+    width: 100%;
+    height: 600px;
+    color: aqua;
+    /*背景の設定*/
+    background-color: rgb(15, 134, 75);
+    background-image: url("../img/cyril-saulnier-mpSMThAU4OY-unsplash.jpg"); /*bgi*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    /*配置と並びの設定*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*課題*/
+    /*右下に寄せてみて*/
+    /*justify-content: flex-end;  横方向*/
+    /*align-items: flex-end;  /*縦方向*/
+   
+}
+
+/*id*/
+#main-visual p {
+    text-align: center; /*tac*/
+}
+
+#about {
+    border:1px solid blue;
+    background-color: aqua;
+    margin: 50px 100px;
+    padding: 20px 150px;
+    /*外側に100pxの余白を入れる*/
+    /*内側に150pxの余白を入れる*/
+
+}
+
+#about h2 {
+    border:1px solid orange;
+    /*position: absolute; /*psa*/
+    /* top: 1px; */
+
+    
+}
+/* cssセレクタ */
+/* 要素ID 要素 100+1+1 =102
+ID+要素 =100+1 =101 */
+
+#about p {
+    border: 1px solid green;
+}
+
+#gallery .inline-container img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#gallery .block-container p {
+    width: 400px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto; 
+    display: none;
+}
+
+
+/* CSSファイル内に書く*/
+/* @media (サイズの条件){
+    その時に適用するCSS
+ } 
+ 
+ サイズの条件に入るのは、
+ 「○○○px以下」→ 「max-width:○○○px」(最大値が○○○pxまで)
+ 「○○○px以上」→ 「min-width:○○○px」(最小値が○○○pxまで)
+ 
+ この時の ○○○px のことを「ブレイクポイント」という
+ */
+
+@media (max-width: 768px) {
+    body {
+        background-color: #ffbe33;
+    }
+    
+    .inline-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .inline-container img {
+        width: 60%;
+        margin-top: 40px ;
+    }
+}
+
